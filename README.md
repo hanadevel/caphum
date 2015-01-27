@@ -1,28 +1,76 @@
-== README
+# CAPHUM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Instalar rvm
 
-Things you may want to cover:
+```console
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 
-* Ruby version
+\curl -sSL https://get.rvm.io | bash -s stable
+```
 
-* System dependencies
+* Instalar ruby 2.2
 
-* Configuration
+```console
+rvm install 2.2
+```
 
-* Database creation
+* Instalar gemas
 
-* Database initialization
+```console
+cd caphum
+rvm use 2.2@caphum --create --ruby-version
+bundle install
+```
 
-* How to run the test suite
+* Configurar la base de datos
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+cp config/database.yml.sample config/database.yml
 
-* Deployment instructions
+nano config/database.yml
+```
 
-* ...
+Configurar la parte de desarrollo (`default` y `development`):
 
+```yaml
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: root
+  socket: /var/run/mysqld/mysqld.sock
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+development:
+  <<: *default
+  database: caphum_development
+```
+
+* Configurar el archivo `secrets.yml`
+
+```console
+cp config/secrets.yml.sample config/secrets.yml
+```
+
+* Inicializar la base de datos y migraciones
+
+```console
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```
+
+Con el último comando se crea el usuario y el password del administrador
+
+```
+Email: admin@caphum.com
+Password: demo123
+```
+
+* Iniciar servidor en modo desarrollo
+
+```console
+rails server
+```
+
+* Visitar la URL http://localhost:3000
