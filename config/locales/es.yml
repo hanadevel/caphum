@@ -30,15 +30,22 @@ es:
     show: "Mostrar"
   index:
     people: "Lista de personas"
+    titles: "Lista de cargos"
     units: "Lista de unidades"
   menu:
     people: "Personas"
+    titles: "Cargos"
     units: "Unidades"
   people:
     edit:
       edit: "Editando persona"
     index:
       new: "Nueva persona"
+  titles:
+    edit:
+      edit: "Editando cargo"
+    index:
+      new: "Nuevo cargo"
   units:
     edit:
       edit: "Editando unidad"
@@ -56,5 +63,9 @@ es:
         last_name: "Paterno"
         names: "Nombres"
         surname: "Materno"
+      title:
+        item: "Ítem"
+        name: "Nombre"
+        unit_id: "Unidad"
       unit:
         name: "Nombre"

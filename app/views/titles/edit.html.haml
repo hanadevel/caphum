@@ -1,0 +1,7 @@
+%h1= t('.edit')
+
+= render 'form'
+
+= link_to t('general.show'), @title
+\|
+= link_to t('general.back'), titles_path

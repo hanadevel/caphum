@@ -1,0 +1,24 @@
+%h1= t('index.titles')
+
+= link_to new_title_path, class: 'btn btn-sm btn-primary' do
+  %span.glyphicon.glyphicon-plus
+  = t('.new')
+
+%table.table.table-striped.table-condensed
+  %thead
+    %tr
+      %th= Title.human_attribute_name('item')
+      %th= Title.human_attribute_name('name')
+      %th= Title.human_attribute_name('unit_id')
+      %th= t('general.actions')
+
+  %tbody
+    - @titles.each do |title|
+      %tr
+        %td= title.item
+        %td= title.name
+        %td= title.unit_name
+        %td
+          = link_to t('general.show'), title
+          = link_to t('general.edit'), edit_title_path(title)
+          = link_to t('general.destroy'), title, :method => :delete, :data => { :confirm => t('general.are_you_sure') }

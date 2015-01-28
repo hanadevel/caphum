@@ -1,16 +1,16 @@
-unidad
-- nombre
+unidad - unit
+- nombre - name
 
-persona
-- paterno
-- materno
-- nombres
-- ci
+persona - person
+- paterno - last_name
+- materno - surname
+- nombres - names
+- ci - id_card
 
-cargo
-- item
-- nombre 
-- basico
+cargo - title
+- item - item
+- nombre - name
+- basico***
 
 cargo_persona
 - alta

@@ -1,0 +1,13 @@
+%p
+  %b #{Title.human_attribute_name('item')}:
+  = @title.item
+%p
+  %b #{Title.human_attribute_name('name')}:
+  = @title.name
+%p
+  %b #{Title.human_attribute_name('unit_id')}:
+  = @title.unit_name
+
+= link_to t('general.edit'), edit_title_path(@title)
+\|
+= link_to t('general.back'), titles_path
