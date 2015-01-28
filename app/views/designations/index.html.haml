@@ -1,0 +1,25 @@
+%h1= t('index.designations')
+
+= link_to new_designation_path, class: 'btn btn-sm btn-primary' do
+  %span.glyphicon.glyphicon-plus
+  = t('.new')
+
+%table.table.table-striped.table-condensed
+  %thead
+    %tr
+      %th= Designation.human_attribute_name('person_id')
+      %th= Designation.human_attribute_name('title_id')
+      %th= Designation.human_attribute_name('start_date')
+      %th= Designation.human_attribute_name('end_date')
+      %th= t('general.actions')
+
+  %tbody
+    - @designations.each do |designation|
+      %tr
+        %td= designation.persona
+        %td= designation.title
+        %td= designation.start_date
+        %td= designation.end_date
+        %td= link_to t('generarl.show'), designation
+        %td= link_to t('generarl.edit'), edit_designation_path(designation)
+        %td= link_to t('generarl.destroy'), designation, :method => :delete, :data => { :confirm => t('generarl.are_you_sure') }

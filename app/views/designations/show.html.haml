@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Persona:
+  = @designation.persona
+%p
+  %b Title:
+  = @designation.title
+%p
+  %b Start date:
+  = @designation.start_date
+%p
+  %b End date:
+  = @designation.end_date
+
+= link_to 'Edit', edit_designation_path(@designation)
+\|
+= link_to 'Back', designations_path

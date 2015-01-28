@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :designations
+
   resources :titles
 
   resources :people

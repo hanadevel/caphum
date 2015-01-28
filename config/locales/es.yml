@@ -29,13 +29,21 @@ es:
     save: "Guardar"
     show: "Mostrar"
   index:
+    designations: "Designación de funciones"
     people: "Lista de personas"
     titles: "Lista de cargos"
     units: "Lista de unidades"
   menu:
+    designations: "Designación"
     people: "Personas"
     titles: "Cargos"
     units: "Unidades"
+
+  designations:
+    edit:
+      edit: "Editando designación"
+    index:
+      new: "Nueva designación"
   people:
     edit:
       edit: "Editando persona"
@@ -54,10 +62,16 @@ es:
 
   activerecord:
     models:
+      deignation: "Designación"
       person: "Persona"
       unit: "Unidad"
 
     attributes:
+      designation:
+        person_id: "Persona"
+        title_id: "Cargo"
+        start_date: "Desde"
+        end_date: "Hasta"
       person:
         id_card: "CI"
         last_name: "Paterno"

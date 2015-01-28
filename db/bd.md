@@ -12,7 +12,9 @@ cargo - title
 - nombre - name
 - basico***
 
-cargo_persona
+designación - designation
+- persona_id
+- cargo_id
 - alta
 - baja
 - basico****
@@ -21,3 +23,13 @@ planilla
 - mes
 - dias_trabajados
 - ***
+
+salarios
+- designacion_id
+- salario
+- desde
+- hasta
+
+dias trabajados - workey days
+- mes
+- dias
