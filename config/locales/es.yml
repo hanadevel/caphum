@@ -29,10 +29,16 @@ es:
     save: "Guardar"
     show: "Mostrar"
   index:
+    people: "Lista de personas"
     units: "Lista de unidades"
   menu:
+    people: "Personas"
     units: "Unidades"
-
+  people:
+    edit:
+      edit: "Editando persona"
+    index:
+      new: "Nueva persona"
   units:
     edit:
       edit: "Editando unidad"
@@ -41,8 +47,14 @@ es:
 
   activerecord:
     models:
+      person: "Persona"
       unit: "Unidad"
 
     attributes:
+      person:
+        id_card: "CI"
+        last_name: "Paterno"
+        names: "Nombres"
+        surname: "Materno"
       unit:
         name: "Nombre"

@@ -1,6 +1,5 @@
 %h1= t('index.units')
 
-
 = link_to new_unit_path, class: 'btn btn-sm btn-primary' do
   %span.glyphicon.glyphicon-plus
   = t('.new')
@@ -10,7 +9,7 @@
     %tr
       %th= Unit.human_attribute_name('name')
       %th= t('general.actions')
-            
+
   %tbody
     - @units.each do |unit|
       %tr

@@ -1,0 +1,16 @@
+%p
+  %b #{Person.human_attribute_name('last_name')}:
+  = @person.last_name
+%p
+  %b #{Person.human_attribute_name('surname')}:
+  = @person.surname
+%p
+  %b #{Person.human_attribute_name('names')}:
+  = @person.names
+%p
+  %b #{Person.human_attribute_name('id_card')}:
+  = @person.id_card
+
+= link_to t('general.edit'), edit_person_path(@person)
+\|
+= link_to t('general.back'), people_path

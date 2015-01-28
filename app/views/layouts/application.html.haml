@@ -26,6 +26,8 @@
           %ul.nav.navbar-nav
             %li{class: "#{'active' if controller_name=='units'}"}
               = link_to t('menu.units'), units_path
+            %li{class: "#{'active' if controller_name=='people'}"}
+              = link_to t('menu.people'), people_path
         / /.nav-collapse
 
     .container-fluid
