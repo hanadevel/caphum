@@ -24,12 +24,8 @@
           = link_to "CapHum - Administración", root_path, class: 'navbar-brand'
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li.active
-              %a{:href => "#"} Home
-            %li
-              %a{:href => "#about"} About
-            %li
-              %a{:href => "#contact"} Contact
+            %li{class: "#{'active' if controller_name=='units'}"}
+              = link_to t('menu.units'), units_path
         / /.nav-collapse
 
     .container-fluid

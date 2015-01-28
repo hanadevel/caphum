@@ -20,4 +20,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  hello: "Hola Mundo"
+  general:
+    actions: "Acciones"
+    are_you_sure: "¿Está seguro?"
+    back: "Regresar"
+    destroy: "Eliminar"
+    edit: "Editar"
+    save: "Guardar"
+    show: "Mostrar"
+  index:
+    units: "Lista de unidades"
+  menu:
+    units: "Unidades"
+
+  units:
+    edit:
+      edit: "Editando unidad"
+    index:
+      new: "Nueva unidad"
+
+  activerecord:
+    models:
+      unit: "Unidad"
+
+    attributes:
+      unit:
+        name: "Nombre"

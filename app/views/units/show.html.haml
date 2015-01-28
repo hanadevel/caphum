@@ -1,0 +1,7 @@
+%p
+  %b #{Unit.human_attribute_name('name')}:
+  = @unit.name
+
+= link_to t('general.edit'), edit_unit_path(@unit)
+\|
+= link_to t('general.back'), units_path
