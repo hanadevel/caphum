@@ -28,13 +28,14 @@ es:
     edit: "Editar"
     save: "Guardar"
     show: "Mostrar"
+    undefined: "Indefinido"
   index:
-    designations: "Designación de funciones"
+    designations: "Designación de cargos"
     people: "Lista de personas"
     titles: "Lista de cargos"
     units: "Lista de unidades"
   menu:
-    designations: "Designación"
+    designations: "Designaciones"
     people: "Personas"
     titles: "Cargos"
     units: "Unidades"

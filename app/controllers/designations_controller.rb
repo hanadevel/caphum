@@ -69,6 +69,6 @@ class DesignationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def designation_params
-      params.require(:designation).permit(:persona_id, :title_id, :start_date, :end_date)
+      params.require(:designation).permit(:person_id, :title_id, :start_date, :end_date)
     end
 end

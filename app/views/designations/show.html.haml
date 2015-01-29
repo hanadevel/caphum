@@ -1,18 +1,16 @@
-%p#notice= notice
-
 %p
-  %b Persona:
-  = @designation.persona
+  %b #{Designation.human_attribute_name('person_id')}:
+  = @designation.person_full_name
 %p
-  %b Title:
-  = @designation.title
+  %b #{Designation.human_attribute_name('title_id')}:
+  = @designation.title_name
 %p
-  %b Start date:
+  %b #{Designation.human_attribute_name('start_date')}:
   = @designation.start_date
 %p
-  %b End date:
-  = @designation.end_date
+  %b #{Designation.human_attribute_name('end_date')}:
+  = @designation.end_date.present? ? @designation.end_date : t('general.undefined')
 
-= link_to 'Edit', edit_designation_path(@designation)
+= link_to t('general.edit'), edit_designation_path(@designation)
 \|
-= link_to 'Back', designations_path
+= link_to t('general.back'), designations_path

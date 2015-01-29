@@ -30,6 +30,8 @@
               = link_to t('menu.people'), people_path
             %li{class: "#{'active' if controller_name=='titles'}"}
               = link_to t('menu.titles'), titles_path
+            %li{class: "#{'active' if controller_name=='designations'}"}
+              = link_to t('menu.designations'), designations_path
         / /.nav-collapse
 
     .container-fluid

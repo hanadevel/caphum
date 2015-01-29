@@ -16,10 +16,11 @@
   %tbody
     - @designations.each do |designation|
       %tr
-        %td= designation.persona
-        %td= designation.title
+        %td= designation.person_full_name
+        %td= designation.title_name
         %td= designation.start_date
-        %td= designation.end_date
-        %td= link_to t('generarl.show'), designation
-        %td= link_to t('generarl.edit'), edit_designation_path(designation)
-        %td= link_to t('generarl.destroy'), designation, :method => :delete, :data => { :confirm => t('generarl.are_you_sure') }
+        %td= designation.end_date.present? ? designation.end_date : t('general.undefined')
+        %td
+          = link_to t('general.show'), designation
+          = link_to t('general.edit'), edit_designation_path(designation)
+          = link_to t('general.destroy'), designation, :method => :delete, :data => { :confirm => t('general.are_you_sure') }
